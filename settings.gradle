@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'Velocity_Plugin'
+rootProject.name = 'Whitelist_Checker_Plugin'
