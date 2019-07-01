@@ -12,7 +12,7 @@ import java.util.Properties;
 import org.slf4j.Logger;
 
 public class Configuration{
-	private static final String CONFIG_PATH = "F:"+File.separator+"Users"+File.separator+"Pedro Feiteira"+File.separator+"Documents"+File.separator+"GitHub"+File.separator+"Velocity_Plugin"+File.separator+"src"+File.separator+"main"+File.separator+"java"+File.separator+"config" + File.separator + "configs.properties";
+	private static final String CONFIG_PATH = "F:"+File.separator+"Users"+File.separator+"Pedro Feiteira"+File.separator+"Documents"+File.separator+"GitHub"+File.separator+"Whitelist_Checker_Plugin"+File.separator+"src"+File.separator+"main"+File.separator+"java"+File.separator+"config" + File.separator + "configs.properties";
 	private final HashMap<String, String> ipWhiteList;
 	private boolean updated = false;
 	private final Logger logger;
