@@ -43,15 +43,15 @@ public class IPHandler {
 	 @Subscribe
 	    public void onPreLogin(PreLoginEvent event) {
 		 	String username = event.getUsername();
+		 	String playerEventIP = event.getConnection().getRemoteAddress().getHostName();
+		 	System.out.println("Username: " + username);
+		 	System.out.println("IP: " + playerEventIP);
 			String playerIP = configuration.isInWhiteList(username);
 			if(playerIP == null) {
 				logger.info("{} Not allowed!", playerIP);
 				 event.setResult(PreLoginComponentResult.denied(NOT_ALLOWED));
 			}else {
 				System.out.println("IP at DB: " + playerIP);
-				String playerEventIP = event.getConnection().getRemoteAddress().getHostName();
-				System.out.println("Event username ->" + username);
-				System.out.println("Event IP-> " + playerEventIP);
 				if(!playerIP.equals(playerEventIP)) {
 					configuration.updateWhiteList(username, playerEventIP);
 				}
